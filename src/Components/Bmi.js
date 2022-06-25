@@ -8,18 +8,22 @@ function Bmi() {
   const [bmi, setBmi] = useState("");
   const [message, setMessage] = useState("");
 
-  let imgSrc = "";
+  let imgSrc;
 
   if (bmi < 1) {
     imgSrc = null;
   } else {
     if (bmi < 25) {
-      imgSrc = require();
+      imgSrc = require('../src/Assets/underweight.png');
+    } else if (bmi >= 25 && bmi < 30) {
+      imgSrc = require("../src/Assets/healthy.png");
+    } else {
+      imgSrc = require("../src/Assets/overweight.png");
     }
   }
 
   let calcBmi = (event) => {
-    event.prventDefault();
+    event.preventDefault();
 
     if (weight === 0 || height === 0) {
       alert("Please enter a valid weight and height");

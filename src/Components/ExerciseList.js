@@ -18,11 +18,11 @@ function ExerciseList() {
   const updatedExercise = (exerciseId, newValue) => {
     if (!newValue.text || /^\s*$/.test(newValue.text)) {
       return;
-
+    }
       setExercises((prev) =>
         prev.map((item) => (item.id === exerciseId ? newValue : item))
       );
-    }
+    
   };
 
   const removeExercise = (id) => {
