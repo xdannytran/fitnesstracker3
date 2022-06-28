@@ -7,7 +7,7 @@ function Exercise({
   exercises,
   completeExercise,
   removeExercise,
-  updateExercise,
+  updatedExercise,
 }) {
   const [edit, setEdit] = useState({
     id: null,
@@ -15,10 +15,10 @@ function Exercise({
   });
 
   const submitUpdate = (value) => {
-    updateExercise(edit.id, value);
+    updatedExercise(edit.id, value);
     setEdit({
       id: null,
-      value: "",
+      value: value,
     });
   };
 

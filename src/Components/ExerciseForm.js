@@ -15,6 +15,7 @@ function ExerciseForm(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("hi")
 
     props.onSubmit({
       id: Math.floor(Math.random() * 10000),
@@ -38,7 +39,7 @@ function ExerciseForm(props) {
               onChange={handleChange}
               ref={inputRef}
             />
-            <button className="exercise-button edit">Update Exercise</button>
+            <button className="exercise-button edit"type="submit">Update Exercise</button>
           </>
         ) : (
           <>
