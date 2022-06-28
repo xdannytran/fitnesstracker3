@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-
+import healthy from '../Assets/healthy.png'
+import underweight from '../Assets/underweight.png'
+import overweight from '../Assets/overweight.png'
 import "../index.css";
 
 function Bmi() {
@@ -14,11 +16,13 @@ function Bmi() {
     imgSrc = null;
   } else {
     if (bmi < 25) {
-      imgSrc = require('../src/Assets/underweight.png');
+        imgSrc= underweight;
     } else if (bmi >= 25 && bmi < 30) {
-      imgSrc = require("../src/Assets/healthy.png");
-    } else {
-      imgSrc = require("../src/Assets/overweight.png");
+        imgSrc= healthy;
+    
+    } 
+    else {
+        imgSrc= overweight;
     }
   }
 
