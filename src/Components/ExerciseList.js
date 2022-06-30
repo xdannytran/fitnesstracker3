@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ExerciseForm from "./ExerciseForm";
 import Exercise from "./Exercise";
+import { NavLink } from "react-router-dom";
 
 function ExerciseList() {
   const [exercises, setExercises] = useState([]);
@@ -19,10 +20,9 @@ function ExerciseList() {
     if (!newValue.text || /^\s*$/.test(newValue.text)) {
       return;
     }
-      setExercises((prev) =>
-        prev.map((item) => (item.id === exerciseId ? newValue : item))
-      );
-    
+    setExercises((prev) =>
+      prev.map((item) => (item.id === exerciseId ? newValue : item))
+    );
   };
 
   const removeExercise = (id) => {
@@ -44,6 +44,7 @@ function ExerciseList() {
   return (
     <div>
       <h1>Exercise for today</h1>
+      <NavLink to="/Bmi">Check Your BMI</NavLink>
       <ExerciseForm onSubmit={addExercise} />
       <Exercise
         exercises={exercises}
