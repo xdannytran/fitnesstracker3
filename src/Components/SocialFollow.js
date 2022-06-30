@@ -9,34 +9,38 @@ import {
    
    function SocialFollow() {
     return (
-        <div className='social-container'>
+        <div>
             <h3 className='social-title'>@EZFitnessTracker</h3>
+            <div className='social-container'>
+           
             <a
                 href=''
                 className='youtube social'
             >
-                <FontAwesomeIcon icon={faYoutube} size="2x"/>
+                <FontAwesomeIcon icon={faYoutube} size="3x"/>
             </a>
             <a
                 href=''
                 className='facebook social'
             >
-                <FontAwesomeIcon icon={faFacebook} size="2x"/>
+                <FontAwesomeIcon icon={faFacebook} size="3x"/>
             </a>
             <a
                 href=''
                 className='Twitter social'
             >
-                <FontAwesomeIcon icon={faTwitter} size="2x"/>
+                <FontAwesomeIcon icon={faTwitter} size="3x"/>
             </a>
             <a
                 href=''
                 className='instgram social'
             >
-                <FontAwesomeIcon icon={faInstagram} size="2x"/>
+                <FontAwesomeIcon icon={faInstagram} size="3x"/>
             </a>
 
+            </div>
         </div>
+        
     )
 }
 

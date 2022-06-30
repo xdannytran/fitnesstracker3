@@ -3,6 +3,7 @@ import ExerciseForm from "./ExerciseForm";
 import Exercise from "./Exercise";
 import { NavLink } from "react-router-dom";
 
+
 function ExerciseList() {
   const [exercises, setExercises] = useState([]);
 
@@ -44,7 +45,9 @@ function ExerciseList() {
   return (
     <div>
       <h1>Exercise for today</h1>
-      <NavLink to="/Bmi">Check Your BMI</NavLink>
+      <NavLink exact className="active" to="/Bmi" >
+        Check Your BMI
+      </NavLink>
       <ExerciseForm onSubmit={addExercise} />
       <Exercise
         exercises={exercises}
